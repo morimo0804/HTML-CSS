@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+body {
+    font-size: 14px;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    line-height: 1.7;
+    letter-spacing: .05em;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.inner {
+    max-width: 960px;
+    width: 86.4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+header {
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+/* top */
+.top {
+    width: 86.4%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    padding: 240px 0 80px;
+    background: url(./images/bg_main.png) no-repeat center center / cover;
+}
+
+.top p {
+    padding: 40px;
+    display: inline-block;
+    font-size: 36px;
+    line-height: 1.3;
+    background-color: #fff;
+}
+
+.top p::before {
+    content: "RECRUITING SITE";
+    margin-bottom: 30px;
+    display: block;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* discussion */
+.discussion {
+    margin-bottom: 100px;
+}
+
+.discussion h2 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.19;
+}
+
+h2::before {
+    content: "KUMONが向き合うもの";
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    background-color: #72C9F3;
+}
+
+h2::after {
+    content: "";
+    margin: 20px auto 0;
+    display: block;
+    width: 80px;
+    border-bottom: solid #000 1px;
+}
+
+article {
+    margin-bottom: 50px;
+    width: 46.8%;
+}
+
+article .info {
+    position: relative;
+}
+
+article p {
+    position: absolute;
+    width: 100%;
+    left: 20px;
+    bottom: 20px;
+    padding: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+article ul {
+    margin-top: 20px;
+    display: flex;
+}
+
+article li {
+    margin-right: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+    background-color: #F5F5F5;
+}
+
+.post-all {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer */
+footer {
+    padding: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+small {
+    font-size: 12px;
+}
+
+/* about */
+.about {
+    max-width: 370px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    margin-bottom: 20px;
+    padding: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    border-bottom: solid #fff 1px;
+}
+
+.item dd {
+    margin-left: 50px;
+}
+
+@media(min-width:640px) {
+    .top {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
