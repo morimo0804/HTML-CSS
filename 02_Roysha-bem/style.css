@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    letter-spacing: 0;
+    color: #6c6c6f;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    border-radius: 27.5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: .025em;
+    color: #fff;
+    background-color: #256BE6;
+}
+
+.btn--second {
+    background-color: #2DBE61;
+}
+
+.btn--warning {
+    background-color: #F87624;
+}
