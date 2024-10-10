@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* base
+------------------------*/
 body {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
@@ -8,7 +10,91 @@ body {
     color: #6c6c6f;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* module
+------------------------*/
+/* header */
+.header {
+    padding: 30px 0;
+    background-color: #123D88;
+}
+
+.header__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__logo {
+    line-height: 1;
+}
+
+/* footer */
+.footer {
+    padding: 32px 0;
+    text-align: right;
+    background-color: #123D88;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__copy {
+    font-size: 15px;
+    color: #fff;
+}
+
+/* unit */
+.unit__catch {
+    margin-bottom: 20px;
+    font-size: 14px;
+    /*大文字にする*/
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #256BE6;
+}
+
+.unit__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #262934;
+}
+
+.unit__text {
+    margin-bottom: 40px;
+}
+
+/* .unit--center {
+    text-align: center;
+} */
+
+/* card */
+.card__icon {
+    margin-bottom: 40px;
+}
+
+.card__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #2F2F35;
+}
+
 .btn {
+    margin-top: 60px;
     display: block;
     width: 200px;
     padding: 20px 0;
@@ -27,4 +113,146 @@ body {
 
 .btn--warning {
     background-color: #F87624;
+}
+
+.btn--outline {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+/* index
+------------------------*/
+/* features */
+.features {
+    padding: 80px 0;
+}
+
+.features__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features__info {
+    width: 46%;
+}
+
+.features__list {
+    width: 46%;
+    margin-bottom: -70px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.features__item {
+    width: 46%;
+    margin-bottom: 70px;
+}
+
+/* payment */
+.payment {
+    padding: 80px 0;
+    background-color: #F7FAFF;
+}
+
+.payment__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment__pic {
+    width: 46%;
+}
+
+.payment__info {
+    width: 46%;
+}
+
+/* service
+------------------------*/
+/* wedo */
+.wedo {
+    padding: 80px 0;
+}
+
+.wedo__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wedo__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.wedo__list {
+    padding: 60px;
+    background-color: #F7FAFF;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wedo__item {
+    width: 30%;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.wedo__item .btn {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* offer */
+.offer {
+    padding: 80px 0;
+    background-color: #505050;
+}
+
+.offer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offer__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.offer__info .unit__title {
+    color: #fff;
+}
+
+.offer__info .btn {
+    margin-left: auto;
+    margin-right: auto;
 }
