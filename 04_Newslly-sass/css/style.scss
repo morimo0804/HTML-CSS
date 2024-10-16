@@ -1,0 +1,76 @@
+$color-text: #888;
+$color-title: #202124;
+$color-accent: #FA6980;
+
+@mixin inner() {
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin title-mein() {
+    border-left: 10px solid $color-accent;
+    font-size: 24px;
+}
+
+body {
+    line-height: (24/14);
+    letter-spacing: (50em/1000);
+    width: (380/1200*100%);
+    color: $color-text;
+}
+
+h1 {
+    background-color: $color-text;
+}
+
+.card {
+    text-align: center;
+
+    .btn {
+        text-align: right;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.header {
+    &__inner {
+        @include inner();
+        @include flex();
+    }
+}
+
+.footer {
+    background-color: $color-title;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        font-size: 12px;
+    }
+}
+
+.news {
+    &__title {
+        @include title-mein()
+    }
+}
+
+.trending {
+    &__title {
+        @include title-mein()
+    }
+}

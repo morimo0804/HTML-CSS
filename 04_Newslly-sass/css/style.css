@@ -1,0 +1,55 @@
+body {
+  line-height: 1.7142857143;
+  letter-spacing: 0.05em;
+  width: 31.6666666667%;
+  color: #888;
+}
+
+h1 {
+  background-color: #888;
+}
+
+.card {
+  text-align: center;
+}
+.card .btn {
+  text-align: right;
+}
+.card .btn a {
+  text-decoration: none;
+}
+
+.header__inner {
+  max-width: 800px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  background-color: #202124;
+}
+.footer__inner {
+  max-width: 800px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copy {
+  font-size: 12px;
+}
+
+.news__title {
+  border-left: 10px solid #FA6980;
+  font-size: 24px;
+}
+
+.trending__title {
+  border-left: 10px solid #FA6980;
+  font-size: 24px;
+}
+/*# sourceMappingURL=style.css.map */
