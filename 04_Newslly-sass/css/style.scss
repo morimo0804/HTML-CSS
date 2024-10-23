@@ -1,58 +1,68 @@
+@charset "utf-8";
 $color-text: #888;
-$color-title: #202124;
+$color-main: #202124;
 $color-accent: #FA6980;
+$color-bg: #f6f6f6;
+$color-time: #bbb;
 
-@mixin inner() {
-    max-width: 800px;
-    width: 90%;
+@mixin inner($mw: 800px, $w: 90%) {
+    max-width: $mw;
+    width: $w;
     margin-left: auto;
     margin-right: auto;
 }
 
-@mixin flex() {
+@mixin flex($ai: center, $jc: space-between) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: $jc;
+    align-items: $ai;
 }
 
-@mixin title-mein() {
+@mixin heading() {
+    margin-bottom: 30px;
+    padding-left: 10px;
     border-left: 10px solid $color-accent;
     font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: (31/24);
+    color: $color-main;
 }
 
+/* base
+------------------------*/
 body {
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: (24/14);
-    letter-spacing: (50em/1000);
-    width: (380/1200*100%);
+    letter-spacing: 0;
     color: $color-text;
 }
 
-h1 {
-    background-color: $color-text;
+img {
+    max-width: 100%;
+    margin-bottom: 0;
+    vertical-align: bottom;
 }
 
-.card {
+/* module
+------------------------*/
+/* header */
+.header {
+    padding: 30px 0 60px;
     text-align: center;
 
-    .btn {
-        text-align: right;
-
-        a {
-            text-decoration: none;
-        }
-    }
-}
-
-.header {
     &__inner {
         @include inner();
-        @include flex();
     }
 }
 
+/* footer */
 .footer {
-    background-color: $color-title;
+    padding: 100px 0 40px;
+    background-color: $color-main;
+    color: #fff;
 
     &__inner {
         @include inner();
@@ -60,17 +70,165 @@ h1 {
 
     &__copy {
         font-size: 12px;
+        line-height: (20/12);
     }
 }
 
-.news {
+/* post */
+.post {
+    &__category {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: (20/12);
+        color: $color-accent;
+    }
+
     &__title {
-        @include title-mein()
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+        color: $color-main;
+
+        &--border {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #DDDDDD;
+        }
     }
 }
 
+/* card */
+.card {
+    background-color: #fff;
+
+    &__body {
+        padding: 35px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+        color: $color-main;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.time {
+    margin-top: 20px;
+    padding-left: 26px;
+    font-size: 12px;
+    line-height: (20/12);
+    color: $color-time;
+    background: url(../images/icon_time.png) no-repeat left center;
+}
+
+.btn {
+    display: block;
+    width: 160px;
+    margin-top: 25px;
+    margin-left: auto;
+    padding: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $color-accent;
+
+    &--info {
+        background-color: $color-main;
+    }
+}
+
+/* index
+------------------------*/
+/* more */
+.more {
+    margin-bottom: 60px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include heading();
+    }
+
+    &__list {
+        @include flex(flex-start);
+        margin-bottom: -60px;
+    }
+
+    &__item {
+        width: (380/800)*100%;
+        margin-bottom: 60px;
+    }
+}
+
+/* trending */
 .trending {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
     &__title {
-        @include title-mein()
+        @include heading();
+    }
+
+    &__list {
+        @include flex(flex-start);
+    }
+
+    &__item {
+        width: (380/800)*100%;
+    }
+}
+
+/* about
+------------------------*/
+/* post */
+.news {
+    margin-bottom: 60px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__item {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* discovery */
+.discovery {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include heading();
+    }
+
+    &__list {
+        @include flex(flex-start);
+    }
+
+    &__item {
+        width: (240/800)*100%;
     }
 }
