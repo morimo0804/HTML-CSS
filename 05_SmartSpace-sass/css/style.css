@@ -1,0 +1,19 @@
+/* base
+------------------------*/
+body {
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.7333333333;
+  letter-spacing: 0.02em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* module
+------------------------*/
+/* header */
+/*# sourceMappingURL=style.css.map */
