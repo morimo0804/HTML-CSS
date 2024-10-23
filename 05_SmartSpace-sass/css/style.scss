@@ -1,5 +1,25 @@
 @charset "utf-8";
 
+$color-text: #31353B;
+$color-accent: #FF9900;
+$color-bg: #DBFFFF;
+$color-btn: #F85A47;
+$color-border: #A3A3A3;
+
+@mixin inner($mw: 1000px, $w: 90%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($ai: center, $jc: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
 /* base
 ------------------------*/
 body {
@@ -7,6 +27,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     line-height: (26/15);
     letter-spacing: (20em/1000);
+    color: $color-text;
 }
 
 img {
@@ -15,6 +36,205 @@ img {
     vertical-align: bottom;
 }
 
+/* nav */
+.nav {
+    &__list {
+        @include flex(center, flex-end);
+    }
+
+    &__item {
+        margin-left: 30px;
+        font-weight: bold;
+
+        &--active {
+            color: $color-accent;
+        }
+    }
+}
+
 /* module
 ------------------------*/
 /* header */
+.header {
+    padding: 50px 0 80px;
+
+    &__inner {
+        @include inner();
+
+        @include flex();
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1;
+    }
+}
+
+/* footer */
+.footer {
+    padding: 100px 0;
+    text-align: right;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        margin-top: 40px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: (26/12);
+    }
+}
+
+/* unit */
+.unit {
+    &__catch {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 0;
+        color: $color-accent;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 48px;
+        line-height: (58/48);
+        color: #000;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+}
+
+/* card */
+.card {
+    padding: 45px 40px;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+
+    &__text {
+        margin-bottom: 80px;
+    }
+
+    &__user {
+        @include flex(center, flex-start);
+    }
+
+    &__info {
+        margin-left: 20px;
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+}
+
+/* btn */
+.btn {
+    display: block;
+    width: 200px;
+    padding: 20px 34px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: $color-btn;
+
+}
+
+.btn--info {
+    background-color: $color-accent;
+}
+
+/* index
+------------------------*/
+/* spaces */
+.spaces {
+    margin-bottom: 120px;
+
+    &__inner {
+        @include inner();
+
+        @include flex();
+    }
+
+    &__info {
+        width: (440/1000)*100%;
+    }
+
+    &__img {
+        width: (500/1000)*100%;
+    }
+}
+
+/* reviews */
+.reviews {
+    margin-bottom: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: (470/1000)*100%;
+    }
+}
+
+/* about
+------------------------*/
+/* deals */
+.deals {
+    margin-bottom: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: (300/1000)*100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+}
+
+/* residential */
+.residential {
+    margin-bottom: 120px;
+
+    &__inner {
+        @include inner();
+
+        @include flex();
+
+        flex-direction: row-reverse;
+    }
+
+    &__info {
+        width: (440/1000)*100%;
+    }
+
+    &__img {
+        width: (500/1000)*100%;
+    }
+}
